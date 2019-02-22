@@ -23,9 +23,6 @@ namespace Rover
             Console.WriteLine("---------------------------------");
             Console.WriteLine($"Harita Boyutu = {map.XMax} x {map.YMax}");
 
-
-
-
             Console.WriteLine("---------------------------------");
             MarsRover rover = new MarsRover();
 

@@ -9,9 +9,9 @@ namespace Rover
     class MarsRover
     {
         public int XRover { get; set; }
+        public int YRover { get; set; }
         public int XRoverMax { get; set; }
         public int YRoverMax { get; set; }
-        public int YRover { get; set; }
         public int RoverDirection { get; set; }
         //protected char[] Directions = { 'W', 'N', 'E', 'S' }; gereksiz
         public void MoveRover(string MoveString)
@@ -53,10 +53,11 @@ namespace Rover
                     }
                 }
             }
+            if (XRover < 0 ) XRover = 0;
+            if (YRover < 0 ) YRover = 0;
+            Console.WriteLine("------------------------------------");
             Console.WriteLine("Rover'ın x=" + XRover);
             Console.WriteLine("Rover'ın y=" + YRover);
-            Console.WriteLine("Yönü = " + DirectionConverter(RoverDirection));
-
         }
         public char DirectionConverter(int a)
         {
@@ -76,7 +77,6 @@ namespace Rover
                     drct = 'S';
                     break;
             }
-
             return drct;
         }
         public int DirectionConverter(string a)
@@ -97,7 +97,6 @@ namespace Rover
                     drct = 3;
                     break;
             }
-
             return drct;
         }
     }
